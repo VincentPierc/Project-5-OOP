@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="40224754-2b2d-4683-a37c-ff463d04dd18" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imagelist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ActionKind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Background.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EntityKind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EventComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EventScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Functions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ImageStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Viewport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VirtualWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorldModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorldTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorldView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/world.sav" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FKS0UxilFubIt7SudWLniSZd7x" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vinhp/Object_Oriented_Labs/Project1&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vinhp\OneDrive - Cal Poly\Super_Senior\CS203\Project\Project1" />
+      <recent name="C:\Users\vinhp\OneDrive - Cal Poly\Super_Senior\CS203\Project\Project1\src" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="WorldModel" />
+      <recent name="Entity" />
+      <recent name="Viewport" />
+      <recent name="WorldView" />
+      <recent name="EventScheduler" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Forest">
+    <configuration name="Forest" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VirtualWorld" />
+      <module name="Project1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Project1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorldTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WorldTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.WorldTests" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="40224754-2b2d-4683-a37c-ff463d04dd18" name="Changes" comment="" />
+      <created>1664239061296</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664239061296</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
