@@ -46,13 +46,11 @@ public final class VirtualWorld extends PApplet {
         parseCommandLine(ARGS);
         loadImages(IMAGE_LIST_FILE_NAME);
         loadWorld(loadFile, this.imageStore);
-
         this.view = new WorldView(VIEW_ROWS, VIEW_COLS, this, world, TILE_WIDTH, TILE_HEIGHT);
         this.scheduler = new EventScheduler();
         this.startTimeMillis = System.currentTimeMillis();
         this.scheduleActions(world, scheduler, imageStore);
     }
-
     public void draw() {
         double appTime = (System.currentTimeMillis() - startTimeMillis) * 0.001;
         double frameTime = (appTime - scheduler.getCurrentTime())/timeScale;
@@ -62,6 +60,7 @@ public final class VirtualWorld extends PApplet {
 
     public void update(double frameTime){
         scheduler.updateOnTime(frameTime);
+
     }
 
     // Just for debugging and for P5
@@ -73,14 +72,21 @@ public final class VirtualWorld extends PApplet {
         Optional<Entity> entityOptional = world.getOccupant(pressed);
         if (entityOptional.isPresent()) {
             Entity entity = entityOptional.get();
-            System.out.println(entity.getEntityID() + ": " + entity.getEntityKind() + " : " + entity.getEntityHealth());
+            System.out.print(entity.getEntityID() + ": " + entity.getClass() + " : " );
+            if (entity instanceof Actionable) {
+                Actionable action = (Actionable) entity;
+                System.out.println(action.getHealth());
+            } else { System.out.println(); }
         }
 
     }
 
     public void scheduleActions(WorldModel world, EventScheduler scheduler, ImageStore imageStore) {
         for (Entity entity : world.getEntities()) {
-            entity.scheduleActions(scheduler, world, imageStore);
+            if( entity instanceof Animated) {
+                Animated animate = (Animated) entity;
+                animate.scheduleActions(scheduler, world, imageStore);
+            }
         }
     }
 

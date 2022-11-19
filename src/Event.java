@@ -12,4 +12,9 @@ public final class Event {
         this.time = time;
         this.entity = entity;
     }
+
+    @Override
+    public String toString() {
+        return(this.entity.toString() + " ");
+    }
 }

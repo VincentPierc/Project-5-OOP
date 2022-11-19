@@ -4,37 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40224754-2b2d-4683-a37c-ff463d04dd18" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imagelist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Action.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ActionKind.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Background.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EntityKind.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventScheduler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Functions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ImageStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Viewport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VirtualWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorldModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorldTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorldView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/world.sav" afterDir="false" />
+    <list default="true" id="40224754-2b2d-4683-a37c-ff463d04dd18" name="Changes" comment="P2 Done">
+      <change afterPath="$PROJECT_DIR$/src/Actionable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Activity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Animate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Animated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Carriable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DudeFull.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DudeNotFull.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Fairy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Movable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Obstacle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sapling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Stump.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Transform.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActionKind.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EntityKind.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VirtualWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VirtualWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,20 +54,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vinhp/Object_Oriented_Labs/Project1&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/vinhp/Object_Oriented_Labs/Project1/src/Action.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vinhp\OneDrive - Cal Poly\Super_Senior\CS203\Project\Project1" />
@@ -115,6 +121,14 @@
       <option name="presentableId" value="Default" />
       <updated>1664239061296</updated>
     </task>
+    <task id="LOCAL-00001" summary="P2 Done">
+      <created>1667259047964</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667259047964</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,5 +141,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="P2 Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="P2 Done" />
   </component>
 </project>
