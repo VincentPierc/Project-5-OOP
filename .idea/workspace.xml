@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40224754-2b2d-4683-a37c-ff463d04dd18" name="Changes" comment="P3 Done" />
+    <list default="true" id="40224754-2b2d-4683-a37c-ff463d04dd18" name="Changes" comment="P3 Done">
+      <change afterPath="$PROJECT_DIR$/images/Icon_" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/grass.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/vein.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/water.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AStarPathingStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PathingMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PathingStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SingleStepPathingStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/wyvern2.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Carriable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Carriable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fairy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fairy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movable.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +60,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vinhp\302_Project_3\src" />
+      <recent name="C:\Users\vinhp\302_Project_3\images" />
+      <recent name="C:\Users\vinhp\302_Project_3" />
       <recent name="C:\Users\vinhp\OneDrive - Cal Poly\Super_Senior\CS203\Project\Project1" />
       <recent name="C:\Users\vinhp\OneDrive - Cal Poly\Super_Senior\CS203\Project\Project1\src" />
     </key>
@@ -71,6 +89,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PathingMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PathingMain" />
+      <module name="Project1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WorldTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project1" />
       <option name="PACKAGE_NAME" value="" />
@@ -82,6 +107,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PathingMain" />
         <item itemvalue="JUnit.WorldTests" />
         <item itemvalue="Application.Main" />
       </list>

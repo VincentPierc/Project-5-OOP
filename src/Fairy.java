@@ -57,19 +57,28 @@ public class Fairy extends Movable {
         }
     }
 
+    /**
+     * SingleStepPathingStrategy
+     * @param world
+     * @param destPos
+     * @return
+     */
     public Point nextPosition(WorldModel world, Point destPos) {
-        int horiz = Integer.signum(destPos.x - super.getEntityPosition().x);
-        Point newPos = new Point(super.getEntityPosition().x + horiz, super.getEntityPosition().y);
+        List<Point> path = new ArrayList<Point>();
+        SingleStepPathingStrategy singleStep = new SingleStepPathingStrategy();
+        Point nextPos;
+        path = singleStep.computePath(this.getEntityPosition(), destPos,
+                p -> world.withinBounds(p) && !world.isOccupied(p), //can pass through
+                (p1, p2) -> p1.adjacent(p2),  //withinReach
+                PathingStrategy.CARDINAL_NEIGHBORS);
 
-        if (horiz == 0 || world.isOccupied(newPos)) {
-            int vert = Integer.signum(destPos.y - super.getEntityPosition().y);
-            newPos = new Point(super.getEntityPosition().x, super.getEntityPosition().y + vert);
+        if(path.size() == 0) {
 
-            if (vert == 0 || world.isOccupied(newPos)) {
-                newPos = super.getEntityPosition();
-            }
+            System.out.println("No path");
+            nextPos = this.getEntityPosition();
+            return nextPos;
         }
-
-        return newPos;
+        nextPos = path.get(0);
+        return nextPos;
     }
 }
