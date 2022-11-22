@@ -29,5 +29,11 @@ public final class Point {
         return result;
     }
 
+    public int calcHCost(Point dest) {
+        return Math.abs(this.x - dest.x) + Math.abs(this.y - dest.y);
+    }
 
+    public int calcGCost(Point start) {
+        return Math.abs(this.x - start.x) + Math.abs(this.y - start.y);
+    }
 }

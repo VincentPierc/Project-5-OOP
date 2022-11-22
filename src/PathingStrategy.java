@@ -26,7 +26,4 @@ interface PathingStrategy {
             .add(new Point(point.x - 1, point.y))  // left
             .add(new Point(point.x + 1, point.y))  // right
             .build();
-
-
-
 }

@@ -31,9 +31,11 @@ public abstract class Carriable extends Movable {
      */
     public Point nextPosition(WorldModel world, Point destPos) {
         List<Point> path = new ArrayList<Point>();
-        SingleStepPathingStrategy singleStep = new SingleStepPathingStrategy();
+        //SingleStepPathingStrategy singleStep = new SingleStepPathingStrategy();
+        AStarPathingStrategy strategy = new AStarPathingStrategy();
         Point nextPos;
-        path = singleStep.computePath(this.getEntityPosition(), destPos,
+        //path = singleStep.computePath(this.getEntityPosition(), destPos,
+        path = strategy.computePath(this.getEntityPosition(), destPos,
                 p -> world.withinBounds(p) && !world.isOccupied(p), //can pass through
                 (p1, p2) -> p1.adjacent(p2),  //withinReach
                 PathingStrategy.CARDINAL_NEIGHBORS);
