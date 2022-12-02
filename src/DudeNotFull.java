@@ -85,12 +85,20 @@ public class DudeNotFull extends Carriable implements Transform {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler) {
         Optional<Entity> target = world.findNearest(super.getEntityPosition(), Tree.class);
-//        Optional<Entity> present = world.findNearest(super.getEntityPosition(), Present.class);
+        Optional<Entity> present = world.findNearest(super.getEntityPosition(), Present.class);
+        if(present.isPresent()) {
+            Point presentPos = present.get().getEntityPosition();
+            Optional<Entity> present2 = world.getOccupant(presentPos);
+            Entity entity = present2.get();
 
-//        if(present.isPresent()&& this.moveToPresent(world, present.get(), scheduler)) {
-//            scheduler.scheduleEvent(this, this.createActivityAction(world, imageStore), super.getActionPeriod());
-//        }
-        if (target.isEmpty() || !this.moveTo(world, target.get(), scheduler) || !this.transform(world, scheduler, imageStore)) {
+            if (this.moveToPresent(world, present.get(), scheduler)) {
+                //scheduler.unscheduleAllEvents(entity);
+                //world.removeEntityAt(presentPos);
+                world.setBackgroundSnow(presentPos, imageStore);
+            }
+            scheduler.scheduleEvent(this, this.createActivityAction(world, imageStore), this.getActionPeriod());
+        }
+        else if (target.isEmpty() || !this.moveTo(world, target.get(), scheduler) || !this.transform(world, scheduler, imageStore)) {
             scheduler.scheduleEvent(this, this.createActivityAction(world, imageStore), super.getActionPeriod());
         }
     }

@@ -5,24 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40224754-2b2d-4683-a37c-ff463d04dd18" name="Changes" comment="A* Implemented">
-      <change afterPath="$PROJECT_DIR$/images/present.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/santa1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/santa2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/snow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Present.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Santa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagelist" beforeDir="false" afterPath="$PROJECT_DIR$/imagelist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AStarPathingStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AStarPathingStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Carriable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Carriable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DudeFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DudeFull.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DudeNotFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DudeNotFull.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fairy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fairy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PathingMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VirtualWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VirtualWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Present.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Present.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Santa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Santa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +29,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$PROJECT_DIR$/../Downloads/ForestProjGivenFiles/processing-experimental.jar!/processing/core/PApplet.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../Downloads/openjdk-18.0.2.1_windows-x64_bin/jdk-18.0.2.1/lib/src.zip!/java.base/java/util/ArrayList.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../Downloads/openjdk-18.0.2.1_windows-x64_bin/jdk-18.0.2.1/lib/src.zip!/java.base/java/util/Objects.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../Downloads/openjdk-18.0.2.1_windows-x64_bin/jdk-18.0.2.1/lib/src.zip!/java.base/jdk/internal/misc/Unsafe.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">

@@ -26,7 +26,7 @@ public class Santa extends Movable {
     }
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler) {
-        Optional<Entity> santaTarget = world.findNearest(super.getEntityPosition(), House.class);
+        Optional<Entity> santaTarget = world.findNearest(super.getEntityPosition(), Tree.class);
         if (santaTarget.isPresent()) {
             Point tgtPos = santaTarget.get().getEntityPosition();
             Optional<Entity> house = world.getOccupant(tgtPos);
@@ -35,28 +35,13 @@ public class Santa extends Movable {
                 scheduler.unscheduleAllEvents(entity);
                 world.removeEntityAt(tgtPos);
                 Present present = new Present(Functions.SANTA_KEY + "_" + santaTarget.get().getEntityID(), tgtPos, imageStore.getImageList(Functions.PRESENT_KEY),
-                        Functions.PRESENT_ANIMATION_PERIOD, Functions.PRESENT_ACTION_PERIOD, Functions.PRESENT_PRESENT_HEALTH, 1);
+                        1, 1, 1, 1);
                 world.tryAddEntity(present);
                 present.scheduleActions(scheduler, world, imageStore);
-
-
-//                Optional<Entity> entityOptional = world.getOccupant(pressed);
-//                if (entityOptional.isPresent()) {
-//                    Entity entity = entityOptional.get();
-//                    scheduler.unscheduleAllEvents(entity);
-//                    world.removeEntityAt(pressed);
-//
-//                Santa santa = new Santa(Functions.SANTA_KEY, pressed, imageStore.getImageList(Functions.SANTA_KEY),
-//                        Functions.SANTA_ANIMATION_PERIOD, Functions.SANTA_ACTION_PERIOD, 10, 10);
-//                world.tryAddEntity(santa);
-//                santa.scheduleActions(scheduler, world, imageStore);
-
-
                 }
-
-
         }
         scheduler.scheduleEvent(this, this.createActivityAction(world, imageStore), this.getActionPeriod());
+
     }
 
     public boolean moveTo(WorldModel world, Entity target, EventScheduler scheduler) {

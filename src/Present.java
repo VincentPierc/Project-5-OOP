@@ -26,18 +26,12 @@ public class Present extends Tree {
     public boolean transform(WorldModel world, EventScheduler scheduler, ImageStore imageStore) {
         if (super.getHealth() <= 0) {
             Stump stump = new Stump(super.getEntityID(), super.getEntityPosition(), imageStore.getImageList(Functions.STUMP_KEY));
+            System.out.println("Present found at " + this.getEntityPosition());
             world.removeEntity(scheduler, this);
             world.addEntity(stump);
-            System.out.println(this.getEntityPosition());
-            //world.setBackgroundSnow(this.getEntityPosition(), imageStore);
+            world.setBackgroundSnow(this.getEntityPosition(), imageStore);
             return true;
-//            if (super.getHealth() <= 0) {
-//                House house = new House(Functions.HOUSE_KEY, this.getEntityPosition(), imageStore.getImageList(Functions.HOUSE_KEY));
-//                world.removeEntity(scheduler, this);
-//                world.addEntity(house);
-//                world.setBackgroundSnow(this.getEntityPosition(), imageStore);
-//                return true;
-//            }
+
         }
         return false;
     }

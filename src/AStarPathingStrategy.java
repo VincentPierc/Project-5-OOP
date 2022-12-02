@@ -94,10 +94,13 @@ public class AStarPathingStrategy implements PathingStrategy {
 
         }
 
-        Point finalPoint = visited.get(visited.size()-1);
-        for(Cell cell : open) {
-            if(finalPoint == cell.getPoint()) {
-                finalCell = cell;
+        int index = visited.size()-1;
+        if(index>=0) {
+            Point finalPoint = visited.get(index);
+            for (Cell cell : open) {
+                if (finalPoint == cell.getPoint()) {
+                    finalCell = cell;
+                }
             }
         }
         while(finalCell.getParent() != null) {

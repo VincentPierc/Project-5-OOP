@@ -122,17 +122,21 @@ public final class WorldModel {
     }
 
     public void setBackgroundSnow(Point pos, ImageStore imageStore) {
-        setBackgroundCell(new Point(pos.x-1, pos.y-1), createSnowBackground(imageStore));
-        setBackgroundCell(new Point(pos.x, pos.y-1), createSnowBackground(imageStore));
-        setBackgroundCell(new Point(pos.x+1, pos.y -1), createSnowBackground(imageStore));
-
-        setBackgroundCell(new Point(pos.x-1, pos.y), createSnowBackground(imageStore));
-        setBackgroundCell(pos, createSnowBackground(imageStore));
-        setBackgroundCell(new Point(pos.x+1, pos.y), createSnowBackground(imageStore));
-
-        setBackgroundCell(new Point(pos.x-1, pos.y+1), createSnowBackground(imageStore));
-        setBackgroundCell(new Point(pos.x, pos.y+1), createSnowBackground(imageStore));
-        setBackgroundCell(new Point(pos.x+1, pos.y+1), createSnowBackground(imageStore));
+        for(int x = -1; x<2; x++) {
+            for (int y = -1; y < 2; y++) {
+                Point temp = new Point (pos.x+x, pos.y+y);
+                if(temp.x <0 || temp.y < 0) { continue; }
+                setBackgroundCell(temp, createSnowBackground(imageStore));
+                Optional<Entity> dude = this.getOccupant(temp);
+                if(dude.isPresent()) {
+                    Entity entity = dude.get();
+//                    if(entity instanceof DudeNotFull ) {
+//                        imageStore.processImageLine();
+//                        entity.images = imageStore.getImageList("deer").get(0);
+//                    }
+                }
+            }
+        }
     }
 
     public void parseSaveFile(Scanner saveFile, ImageStore imageStore, Background defaultBackground) {
