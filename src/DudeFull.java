@@ -27,7 +27,6 @@ public class DudeFull extends Carriable{
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler) {
         Optional<Entity> fullTarget = world.findNearest(super.getEntityPosition(), House.class);
-
         if (fullTarget.isPresent() && this.moveTo(world, fullTarget.get(), scheduler)) {
             this.transform(world, scheduler, imageStore);
         } else {

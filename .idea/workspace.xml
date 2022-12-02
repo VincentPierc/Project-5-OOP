@@ -4,15 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40224754-2b2d-4683-a37c-ff463d04dd18" name="Changes" comment="Single Stepping Implemented">
-      <change afterPath="$PROJECT_DIR$/src/Cell.java" afterDir="false" />
+    <list default="true" id="40224754-2b2d-4683-a37c-ff463d04dd18" name="Changes" comment="A* Implemented">
+      <change afterPath="$PROJECT_DIR$/images/present.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/santa1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/santa2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/snow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Present.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Santa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagelist" beforeDir="false" afterPath="$PROJECT_DIR$/imagelist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AStarPathingStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AStarPathingStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Carriable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Carriable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DudeFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DudeFull.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DudeNotFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DudeNotFull.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fairy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fairy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PathingMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PathingMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PathingStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PathingStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PathingMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VirtualWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VirtualWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +39,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../Downloads/ForestProjGivenFiles/processing-experimental.jar!/processing/core/PApplet.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../Downloads/openjdk-18.0.2.1_windows-x64_bin/jdk-18.0.2.1/lib/src.zip!/java.base/jdk/internal/misc/Unsafe.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,16 +61,19 @@
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vinhp/Object_Oriented_Labs/Project1/src/Action.java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vinhp/302_Project_3/images&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vinhp\302_Project_3\src" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\vinhp\302_Project_3\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vinhp\302_Project_3\images" />
+      <recent name="C:\Users\vinhp\302_Project_3\src" />
       <recent name="C:\Users\vinhp\302_Project_3" />
       <recent name="C:\Users\vinhp\OneDrive - Cal Poly\Super_Senior\CS203\Project\Project1" />
       <recent name="C:\Users\vinhp\OneDrive - Cal Poly\Super_Senior\CS203\Project\Project1\src" />
@@ -144,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668964792251</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="A* Implemented">
+      <created>1669088923497</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669088923497</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,7 +187,8 @@
     <MESSAGE value="P2 Done" />
     <MESSAGE value="P3 Done" />
     <MESSAGE value="Single Stepping Implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Single Stepping Implemented" />
+    <MESSAGE value="A* Implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="A* Implemented" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -86,7 +86,6 @@ public class AStarPathingStrategy implements PathingStrategy {
                     }
                 }
             }
-            //if(currPos.getPoint() == start) { noPathFlag = true; }
             if(!close.contains(currPos.getPoint())) {
                 close = tempClose;
                 close.add(currPos.getPoint());

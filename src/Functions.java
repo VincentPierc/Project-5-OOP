@@ -61,5 +61,20 @@ public final class Functions {
     public static final int TREE_HEALTH_MAX = 3;
     public static final int TREE_HEALTH_MIN = 1;
 
+    public static final String SANTA_KEY = "santa";
+    public static final int SANTA_ANIMATION_PERIOD = 1;
+    public static final int SANTA_ACTION_PERIOD = 1;
+    //public static final int SANTA_NUM_PROPERTIES = 2;
+
+    public static final String PRESENT_KEY = "present";
+    public static final int PRESENT_ANIMATION_PERIOD = 1;
+    public static final int PRESENT_ACTION_PERIOD = 1;
+    public static final int PRESENT_PRESENT_HEALTH = 1;
+    //public static final int PRESENT_NUM_PROPERTIES = 5;
+
+
+
+
+
 
 }

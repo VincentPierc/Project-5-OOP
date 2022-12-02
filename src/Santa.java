@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class Fairy extends Movable {
+public class Santa extends Movable {
 
-    public Fairy(String id, Point position, List<PImage> images, double animationPeriod, double actionPeriod, int health, int healthLimit) {
+    public Santa(String id, Point position, List<PImage> images, double animationPeriod, double actionPeriod, int health, int healthLimit) {
         super(id, position, images, animationPeriod, actionPeriod, health, healthLimit);
     }
 
@@ -26,20 +26,36 @@ public class Fairy extends Movable {
     }
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler) {
-        Optional<Entity> fairyTarget = world.findNearest(super.getEntityPosition(), Stump.class);
-        if (fairyTarget.isPresent()) {
+        Optional<Entity> santaTarget = world.findNearest(super.getEntityPosition(), House.class);
+        if (santaTarget.isPresent()) {
+            Point tgtPos = santaTarget.get().getEntityPosition();
+            Optional<Entity> house = world.getOccupant(tgtPos);
+            Entity entity = house.get();
+            if (this.moveTo(world, santaTarget.get(), scheduler)) {
+                scheduler.unscheduleAllEvents(entity);
+                world.removeEntityAt(tgtPos);
+                Present present = new Present(Functions.SANTA_KEY + "_" + santaTarget.get().getEntityID(), tgtPos, imageStore.getImageList(Functions.PRESENT_KEY),
+                        Functions.PRESENT_ANIMATION_PERIOD, Functions.PRESENT_ACTION_PERIOD, Functions.PRESENT_PRESENT_HEALTH, 1);
+                world.tryAddEntity(present);
+                present.scheduleActions(scheduler, world, imageStore);
 
-            Point tgtPos = fairyTarget.get().getEntityPosition();
-            if (this.moveTo(world, fairyTarget.get(), scheduler)) {
 
-                Sapling sapling = new Sapling(Functions.SAPLING_KEY + "_" + fairyTarget.get().getEntityID(), tgtPos, imageStore.getImageList(Functions.SAPLING_KEY),
-                        Functions.SAPLING_ACTION_ANIMATION_PERIOD, Functions.SAPLING_ACTION_ANIMATION_PERIOD, super.getHealth(), super.getHealthLimit());
+//                Optional<Entity> entityOptional = world.getOccupant(pressed);
+//                if (entityOptional.isPresent()) {
+//                    Entity entity = entityOptional.get();
+//                    scheduler.unscheduleAllEvents(entity);
+//                    world.removeEntityAt(pressed);
+//
+//                Santa santa = new Santa(Functions.SANTA_KEY, pressed, imageStore.getImageList(Functions.SANTA_KEY),
+//                        Functions.SANTA_ANIMATION_PERIOD, Functions.SANTA_ACTION_PERIOD, 10, 10);
+//                world.tryAddEntity(santa);
+//                santa.scheduleActions(scheduler, world, imageStore);
 
-                world.addEntity(sapling);
-                sapling.scheduleActions(scheduler, world, imageStore);
-            }
+
+                }
+
+
         }
-
         scheduler.scheduleEvent(this, this.createActivityAction(world, imageStore), this.getActionPeriod());
     }
 
@@ -75,7 +91,7 @@ public class Fairy extends Movable {
                 PathingStrategy.CARDINAL_NEIGHBORS);
 
         if(path.size() == 0) {
-//          System.out.println("No path");
+            //System.out.println("No path");
             nextPos = this.getEntityPosition();
             return nextPos;
         } else {

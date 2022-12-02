@@ -51,7 +51,21 @@ public class DudeNotFull extends Carriable implements Transform {
             return false;
         }
     }
+    public boolean moveToPresent(WorldModel world, Entity target, EventScheduler scheduler) {
+        Present present = (Present) target;
+        if (super.getEntityPosition().adjacent(target.getEntityPosition())) {
 
+            present.setHealth(present.getHealth() - 1);
+            return true;
+        } else {
+            Point nextPos = super.nextPosition(world, target.getEntityPosition());
+
+            if (!super.getEntityPosition().equals(nextPos)) {
+                world.moveEntity(scheduler, this, nextPos);
+            }
+            return false;
+        }
+    }
     public boolean transform(WorldModel world, EventScheduler scheduler, ImageStore imageStore) {
         if (this.getResourceCount() >= super.getResourceLimit()) {
 
@@ -71,7 +85,11 @@ public class DudeNotFull extends Carriable implements Transform {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler) {
         Optional<Entity> target = world.findNearest(super.getEntityPosition(), Tree.class);
+//        Optional<Entity> present = world.findNearest(super.getEntityPosition(), Present.class);
 
+//        if(present.isPresent()&& this.moveToPresent(world, present.get(), scheduler)) {
+//            scheduler.scheduleEvent(this, this.createActivityAction(world, imageStore), super.getActionPeriod());
+//        }
         if (target.isEmpty() || !this.moveTo(world, target.get(), scheduler) || !this.transform(world, scheduler, imageStore)) {
             scheduler.scheduleEvent(this, this.createActivityAction(world, imageStore), super.getActionPeriod());
         }

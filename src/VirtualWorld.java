@@ -1,6 +1,8 @@
+import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
+import java.util.List;
 
 import processing.core.*;
 
@@ -17,6 +19,7 @@ public final class VirtualWorld extends PApplet {
 
     private static final String IMAGE_LIST_FILE_NAME = "imagelist";
     private static final String DEFAULT_IMAGE_NAME = "background_default";
+
     private static final int DEFAULT_IMAGE_COLOR = 0x808080;
 
     private static final String FAST_FLAG = "-fast";
@@ -50,6 +53,7 @@ public final class VirtualWorld extends PApplet {
         this.scheduler = new EventScheduler();
         this.startTimeMillis = System.currentTimeMillis();
         this.scheduleActions(world, scheduler, imageStore);
+        //
     }
     public void draw() {
         double appTime = (System.currentTimeMillis() - startTimeMillis) * 0.001;
@@ -72,13 +76,27 @@ public final class VirtualWorld extends PApplet {
         Optional<Entity> entityOptional = world.getOccupant(pressed);
         if (entityOptional.isPresent()) {
             Entity entity = entityOptional.get();
-            System.out.print(entity.getEntityID() + ": " + entity.getClass() + " : " );
-            if (entity instanceof Actionable) {
-                Actionable action = (Actionable) entity;
-                System.out.println(action.getHealth());
+            scheduler.unscheduleAllEvents(entity);
+            world.removeEntityAt(pressed);
             } else { System.out.println(); }
-        }
+        Santa santa = new Santa(Functions.SANTA_KEY, pressed, imageStore.getImageList(Functions.SANTA_KEY),
+                3, Functions.SANTA_ACTION_PERIOD, 10, 10);
+        world.tryAddEntity(santa);
+        santa.scheduleActions(scheduler, world, imageStore);
 
+        world.setBackgroundSnow(pressed, imageStore);
+
+
+    }
+    public void loadWorld(String file, ImageStore imageStore) {
+        this.world = new WorldModel();
+        try {
+            Scanner in = new Scanner(new File(file));
+            world.load(in, imageStore, createDefaultBackground(imageStore));
+        } catch (FileNotFoundException e) {
+            Scanner in = new Scanner(file);
+            world.load(in, imageStore, createDefaultBackground(imageStore));
+        }
     }
 
     public void scheduleActions(WorldModel world, EventScheduler scheduler, ImageStore imageStore) {
@@ -131,16 +149,7 @@ public final class VirtualWorld extends PApplet {
         }
     }
 
-    public void loadWorld(String file, ImageStore imageStore) {
-        this.world = new WorldModel();
-        try {
-            Scanner in = new Scanner(new File(file));
-            world.load(in, imageStore, createDefaultBackground(imageStore));
-        } catch (FileNotFoundException e) {
-            Scanner in = new Scanner(file);
-            world.load(in, imageStore, createDefaultBackground(imageStore));
-        }
-    }
+
 
     public void parseCommandLine(String[] args) {
         for (String arg : args) {

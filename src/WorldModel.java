@@ -1,6 +1,8 @@
 import processing.core.PImage;
 
+import java.awt.*;
 import java.util.*;
+import java.util.List;
 
 /**
  * Represents the 2D World in which this simulation is running.
@@ -13,6 +15,8 @@ public final class WorldModel {
     private Background[][] background;
     private Entity[][] occupancy;
     private Set<Entity> entities;
+
+
 
     public WorldModel() {
 
@@ -107,13 +111,28 @@ public final class WorldModel {
         this.parseSaveFile(saveFile, imageStore, defaultBackground);
         if (this.background == null) {
             this.background = new Background[this.numRows][this.numCols];
-            for (Background[] row : this.background)
+            for (Background[] row : this.background) {
                 Arrays.fill(row, defaultBackground);
+            }
         }
         if (this.occupancy == null) {
             this.occupancy = new Entity[this.numRows][this.numCols];
             this.entities = new HashSet<>();
         }
+    }
+
+    public void setBackgroundSnow(Point pos, ImageStore imageStore) {
+        setBackgroundCell(new Point(pos.x-1, pos.y-1), createSnowBackground(imageStore));
+        setBackgroundCell(new Point(pos.x, pos.y-1), createSnowBackground(imageStore));
+        setBackgroundCell(new Point(pos.x+1, pos.y -1), createSnowBackground(imageStore));
+
+        setBackgroundCell(new Point(pos.x-1, pos.y), createSnowBackground(imageStore));
+        setBackgroundCell(pos, createSnowBackground(imageStore));
+        setBackgroundCell(new Point(pos.x+1, pos.y), createSnowBackground(imageStore));
+
+        setBackgroundCell(new Point(pos.x-1, pos.y+1), createSnowBackground(imageStore));
+        setBackgroundCell(new Point(pos.x, pos.y+1), createSnowBackground(imageStore));
+        setBackgroundCell(new Point(pos.x+1, pos.y+1), createSnowBackground(imageStore));
     }
 
     public void parseSaveFile(Scanner saveFile, ImageStore imageStore, Background defaultBackground) {
@@ -153,6 +172,10 @@ public final class WorldModel {
         this.background[pos.y][pos.x] = background;
     }
 
+
+    public static Background createSnowBackground(ImageStore imageStore) {
+        return new Background("snow", imageStore.getImageList("snow"));
+    }
     public Optional<PImage> getBackgroundImage(Point pos) {
         if (this.withinBounds(pos)) {
             return Optional.of(this.getBackgroundCell(pos).getCurrentImage());
